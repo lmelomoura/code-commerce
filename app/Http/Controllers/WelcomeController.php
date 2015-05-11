@@ -32,5 +32,11 @@ class WelcomeController extends Controller {
 	{
 		return view('welcome');
 	}
+	
+	public function teste()
+	{
+		$nome = 'Luiz';
+		return view('teste')->with('nome',$nome);
+	}
 
 }
