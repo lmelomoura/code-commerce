@@ -17,7 +17,13 @@ Route::get('home', 'HomeController@index');
 
 Route::get('teste', 'WelcomeController@teste');
 
+Route::get('admin/categories', 'AdminCategoriesController@index');
+
+Route::get('admin/products', 'AdminProductsController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
