@@ -15,19 +15,21 @@ Route::pattern('id','[0-9]+');
 
 Route::group(['prefix' => 'admin'], function(){
     Route::group(['prefix' => 'categories'], function(){
-        Route::get('create', ['as'=> 'categoriesCreate','uses' => 'Admin\AdminCategoriesController@create']);
-        Route::get('request/{id}', ['as'=> 'categoriesRequest','uses' => 'Admin\AdminCategoriesController@request']);
-        Route::get('update/{id}', ['as'=> 'categoriesUpdate','uses' => 'Admin\AdminCategoriesController@update']);
-        Route::get('delete/{id}', ['as'=> 'categoriesDelete','uses' => 'Admin\AdminCategoriesController@delete']);
-        Route::get('/', ['as'=> 'categoriesList','uses' => 'Admin\AdminCategoriesController@index']);
+        Route::get('create', ['as'=> 'categoriesCreate','uses' => 'Admin\CategoriesController@create']);
+        Route::post('store', ['as'=> 'categoriesStore','uses' => 'Admin\CategoriesController@store']);
+        Route::get('edit/{id}', ['as'=> 'categoriesEdit','uses' => 'Admin\CategoriesController@edit']);
+        Route::put('update/{id}', ['as'=> 'categoriesUpdate','uses' => 'Admin\CategoriesController@update']);
+        Route::get('delete/{id}', ['as'=> 'categoriesDelete','uses' => 'Admin\CategoriesController@delete']);
+        Route::get('/', ['as'=> 'categoriesList','uses' => 'Admin\CategoriesController@index']);
     });
 
     Route::group(['prefix' => 'products'], function(){
-        Route::get('create', ['as'=> 'productsCreate','uses' => 'Admin\AdminProductsController@create']);
-        Route::get('request/{id}', ['as'=> 'productsRequest','uses' => 'Admin\AdminProductsController@request']);
-        Route::get('update/{id}', ['as'=> 'productsUpdate','uses' => 'Admin\AdminProductsController@update']);
-        Route::get('delete/{id}', ['as'=> 'productsDelete','uses' => 'Admin\AdminProductsController@delete']);
-        Route::get('/', ['as'=> 'productsList','uses' => 'Admin\AdminProductsController@index']);
+        Route::get('create', ['as'=> 'productsCreate','uses' => 'Admin\ProductsController@create']);
+        Route::post('store', ['as'=> 'productsStore','uses' => 'Admin\ProductsController@store']);
+        Route::get('edit/{id}', ['as'=> 'productsEdit','uses' => 'Admin\ProductsController@edit']);
+        Route::put('update/{id}', ['as'=> 'productsUpdate','uses' => 'Admin\ProductsController@update']);
+        Route::get('delete/{id}', ['as'=> 'productsDelete','uses' => 'Admin\ProductsController@delete']);
+        Route::get('/', ['as'=> 'productsList','uses' => 'Admin\ProductsController@index']);
     });
 });
 
@@ -42,5 +44,6 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
 
 
