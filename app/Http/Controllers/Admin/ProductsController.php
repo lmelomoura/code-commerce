@@ -42,6 +42,8 @@ class ProductsController extends Controller {
 
     public function delete($id)
     {
+
+
         $this->products->find($id)->delete();
         return redirect(route('productsList'));
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e621737a1f9498b3e626181dad43d78",
+    "hash": "c3dc76ccbb903fc385f518202d5d35b3",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -221,6 +221,54 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "fzaninotto/faker",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "010c7efedd88bf31141a02719f51fb44c732d5a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/010c7efedd88bf31141a02719f51fb44c732d5a0",
+                "reference": "010c7efedd88bf31141a02719f51fb44c732d5a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-0": {
+                    "Faker": "src/",
+                    "Faker\\PHPUnit": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2014-06-04 14:43:02"
         },
         {
             "name": "illuminate/html",
@@ -456,16 +504,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.0.28",
+            "version": "v5.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "06a09429322cf53e5bd4587db1060f02a291562e"
+                "reference": "db0a7400465df159ba8c6eaa954f97f50bc19687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/06a09429322cf53e5bd4587db1060f02a291562e",
-                "reference": "06a09429322cf53e5bd4587db1060f02a291562e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/db0a7400465df159ba8c6eaa954f97f50bc19687",
+                "reference": "db0a7400465df159ba8c6eaa954f97f50bc19687",
                 "shasum": ""
             },
             "require": {
@@ -578,7 +626,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-04-21 01:44:32"
+            "time": "2015-05-11 22:15:00"
         },
         {
             "name": "league/flysystem",

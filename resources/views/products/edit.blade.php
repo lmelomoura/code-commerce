@@ -26,10 +26,13 @@
         </div>
         <div class="form-group">
             {!! Form::label('featured','Destaque') !!}
+
             {!! Form::checkbox('featured',1,$product->featured) !!}
+
             {!! Form::label('recommended','Recomendado') !!}
             {!! Form::checkbox('recommended',1,$product->recommended) !!}
         </div>
+
         <div class="form-group">
             {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
             {!! Form::button('Cancelar', ['onClick'=>'window.location=\''.route('productsList').'\'', 'class' => 'btn btn-primary ']) !!}

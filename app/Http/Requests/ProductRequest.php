@@ -2,6 +2,7 @@
 
 use CodeCommerce\Http\Requests\Request;
 
+
 class ProductRequest extends Request {
 
 	/**
@@ -21,6 +22,20 @@ class ProductRequest extends Request {
 	 */
 	public function rules()
 	{
+        $resquestIpunt = $this->all();
+        if (!$this->has('featured'))
+        {
+            $resquestIpunt['featured'] = 0;
+        }
+        if (!$this->has('recommended'))
+        {
+            $resquestIpunt['recommended'] = 0;
+        }
+
+        $this->replace($resquestIpunt);
+
+
+
         return [
             'name' => 'Required|min:5|max:30',
             'description' => 'Required',
