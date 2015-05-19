@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration {
             $table->boolean('featured')->nullable();
             $table->boolean('recommended')->nullable();
 			$table->timestamps();
+
 		});
 	}
 

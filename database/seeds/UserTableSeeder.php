@@ -8,22 +8,24 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use CodeCommerce\Category;
+use CodeCommerce\User;
 use Faker\Factory as Faker;
 
 
-class CategoryTableSeeder extends Seeder{
+class UserTableSeeder extends Seeder{
 
 
     public function run()
     {
         $faker = Faker::create('pt_BR');
-        DB::table('categories')->truncate();
+        DB::table('users')->truncate();
 
         foreach(range(1,15) as $i){
-            Category::Create([
-                'name' => $faker->word(),
-                'description' => $faker->realText(150,5)
+            User::Create([
+                'name' => $faker->name(),
+                'email' => $faker->email(),
+                'password' => $faker->sha256(),
+                'remember_token' => $faker->uuid()
             ]);
         }
     }
